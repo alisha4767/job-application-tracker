@@ -53,31 +53,9 @@ job-application-tracker/
 ├── README.md
 └── vite.config.ts
 ```
-## features
-Add new job applications
-Track company name, job role, location, status, and notes
-Search applications by company or role
-Filter applications by status
-View dashboard statistics
-Delete job applications
-Save applications in browser using localStorage
-Responsive design for desktop, tablet, and mobile
-Clean and modern user interface
-Reusable React components
-Type-safe code using TypeScript
-```
-# Tech Stack
-| Technology   | Purpose                       |
-| ------------ | ----------------------------- |
-| React        | Frontend library              |
-| TypeScript   | Type safety                   |
-| Vite         | Fast development setup        |
-| CSS3         | Styling and responsive design |
-| LocalStorage | Browser data persistence      |
-| Git & GitHub | Version control               |
 
-``
-How the Project Works
+
+# How the Project Works
 
 The app stores job application data inside React state.
 
@@ -87,10 +65,9 @@ The user can search applications by company name or role. The user can also filt
 
 The dashboard cards show quick statistics like total applications, interviews, offers, and rejected applications.
 ```
+```
 # Future Improvements
-
 These features can be added later:
-
 Edit job applications
 Dark mode
 Export applications as CSV
