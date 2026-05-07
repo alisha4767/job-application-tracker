@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+# Job Application Tracker Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React dashboard that helps users track job applications, interviews, offers, and rejections in one place.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add job applications
+- Track application status
+- Search applications by company or role
+- Filter applications by status
+- Dashboard statistics
+- Delete applications
+- Data persistence using localStorage
+- Responsive modern UI
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- CSS3
+- LocalStorage
 
-## Expanding the ESLint configuration
+## Folder Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```txt
+job-application-tracker/
+├── public/
+│   └── demo-preview.png
+├── src/
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── EmptyState.tsx
+│   │   │   └── StatCard.tsx
+│   │   └── jobs/
+│   │       ├── JobCard.tsx
+│   │       ├── JobFilters.tsx
+│   │       ├── JobForm.tsx
+│   │       └── JobList.tsx
+│   ├── data/
+│   │   └── sampleJobs.ts
+│   ├── hooks/
+│   │   └── useLocalStorage.ts
+│   ├── types/
+│   │   └── job.ts
+│   ├── utils/
+│   │   └── date.ts
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.ts
 ```
+## features
+Add new job applications
+Track company name, job role, location, status, and notes
+Search applications by company or role
+Filter applications by status
+View dashboard statistics
+Delete job applications
+Save applications in browser using localStorage
+Responsive design for desktop, tablet, and mobile
+Clean and modern user interface
+Reusable React components
+Type-safe code using TypeScript
+```
+# Tech Stack
+| Technology   | Purpose                       |
+| ------------ | ----------------------------- |
+| React        | Frontend library              |
+| TypeScript   | Type safety                   |
+| Vite         | Fast development setup        |
+| CSS3         | Styling and responsive design |
+| LocalStorage | Browser data persistence      |
+| Git & GitHub | Version control               |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+``
+How the Project Works
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The app stores job application data inside React state.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+When a user adds a new job application, the data is saved in the browser using localStorage. This means the data remains available even after refreshing the page.
+
+The user can search applications by company name or role. The user can also filter applications by status such as Applied, Interview, Offer, or Rejected.
+
+The dashboard cards show quick statistics like total applications, interviews, offers, and rejected applications.
+```
+# Future Improvements
+
+These features can be added later:
+
+Edit job applications
+Dark mode
+Export applications as CSV
+Add priority labels
+Add company logo
+Add deadline/reminder date
+Add drag-and-drop Kanban board
+Add authentication
+Connect with backend API
+Store data in MongoDB
 ```
